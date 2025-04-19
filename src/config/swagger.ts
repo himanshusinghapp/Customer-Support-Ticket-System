@@ -1,21 +1,6 @@
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 
-// Swagger definition
-// const swaggerDefinition = {
-//   openapi: '3.0.0',  // OpenAPI specification version
-//   info: {
-//     title: 'Customer Support Ticket System API',  // API title
-//     version: '1.0.0',  // API version
-//     description: 'API documentation for the Customer Support Ticket System',
-//   },
-//   servers: [
-//     {
-//       url: 'http://localhost:5000',  // Server URL
-//     },
-//   ],
-// };
-
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {

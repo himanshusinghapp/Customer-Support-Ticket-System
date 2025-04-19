@@ -1,0 +1,6 @@
+projectKey=Customer-support-ticket
+serverUrl=http://localhost:9000
+serverVersion=25.4.0.105899
+dashboardUrl=http://localhost:9000/dashboard?id=Customer-support-ticket
+ceTaskId=c62d8bc7-c176-410c-80c0-0e18ea3f3a53
+ceTaskUrl=http://localhost:9000/api/ce/task?id=c62d8bc7-c176-410c-80c0-0e18ea3f3a53
