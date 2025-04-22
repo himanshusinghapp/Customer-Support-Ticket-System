@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import { User } from '../models/user.model';
-import { sendSuccessResponse, sendErrorResponse } from '../common/helpers/response';
-import { MESSAGES } from '../common/constants/messages';
-import { HTTP_STATUS } from '../common/constants/httpStatus';
+import { User } from '@models/user.model';
+import { sendSuccessResponse, sendErrorResponse } from '@common/helpers/response';
+import { MESSAGES } from '@common/constants/messages';
+import { HTTP_STATUS } from '@common/constants/httpStatus';
 
 export const getUserProfile = async (req: Request, res: Response): Promise<void> => {
   const userId = (req as any).user.id;

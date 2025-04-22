@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { addReply, getReplies } from '../controllers/reply.controller';
-import { authenticate } from '../middleware/auth.middleware';
+import { addReply, getReplies } from '@controllers/reply.controller';
+import { authenticate } from '@middleware/auth.middleware';
 
 const router = Router();
 

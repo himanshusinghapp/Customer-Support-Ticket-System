@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import { signup, login } from '../services/auth.service';
-import { signupSchema, loginSchema } from '../middleware/auth.validator';
-import { sendSuccessResponse, sendErrorResponse } from '../common/helpers/response';
-import { MESSAGES } from '../common/constants/messages';
-import { HTTP_STATUS } from '../common/constants/httpStatus';
+import { signup, login } from '@services/auth.service';
+import { signupSchema, loginSchema } from '@middleware/auth.validator';
+import { sendSuccessResponse, sendErrorResponse } from '@common/helpers/response';
+import { MESSAGES } from '@common/constants/messages';
+import { HTTP_STATUS } from '@common/constants/httpStatus';
 
 export const signupHandler = async (req: Request, res: Response): Promise<void> => {
   const { error } = signupSchema.validate(req.body);

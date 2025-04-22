@@ -4,8 +4,8 @@ import {
   getUserTickets,
   getTicketById,
   getRecentTickets
-} from '../controllers/ticket.controller';
-import { authenticate } from '../middleware/auth.middleware';
+} from '@controllers/ticket.controller';
+import { authenticate } from '@middleware/auth.middleware';
 
 const router = Router();
 

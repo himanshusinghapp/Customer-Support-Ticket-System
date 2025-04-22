@@ -10,10 +10,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export const sendNotificationEmail = async (from: string, subject: string, text: string) => {
+export const sendEmail = async (to: string, subject: string, text: string) => {
   await transporter.sendMail({
-    from,
-    to:`"Support System" <${process.env.EMAIL_USER}>`,
+    from:`"Support System" <${process.env.EMAIL_USER}>`,
+    to,
     subject,
     text,
   });

@@ -1,15 +1,16 @@
 import { Request, Response } from 'express';
-import { Ticket } from '../models/ticket.model';
-import { publishToQueue } from '../config/rabbit';
-import { redis } from '../config/redis'; // ✅ updated to match your file
-import { sendSuccessResponse, sendErrorResponse } from '../common/helpers/response';
-import { MESSAGES } from '../common/constants/messages';
-import { HTTP_STATUS } from '../common/constants/httpStatus';
+import { Ticket } from '@models/ticket.model';
+import { publishToQueue } from '@config/rabbit';
+import { redis } from '@config/redis'; // ✅ updated to match your file
+import { sendSuccessResponse, sendErrorResponse } from '@common/helpers/response';
+import { MESSAGES } from '@common/constants/messages';
+import { HTTP_STATUS } from '@common/constants/httpStatus';
 
 // Create a new support ticket
 export const createTicket = async (req: Request, res: Response) => {
   try {
-    const userId = (req as any).user.id;
+    const {id: userId, email: userEmail}= (req as any).user;
+  //  console.log(userId, userEmail);
     const { subject, description } = req.body;
 
     const ticket = await Ticket.create({ subject, description, user: userId });
@@ -18,7 +19,8 @@ export const createTicket = async (req: Request, res: Response) => {
     await publishToQueue('ticket_created', {
       ticketId: ticket._id,
       subject: ticket.subject,
-      userId,
+      // userId,
+      userEmail
     });
 
     // 🚀 Cache in Redis (keep only 10 most recent)

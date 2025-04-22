@@ -7,7 +7,7 @@
 
 /**
  * @swagger
- * /api/users/me:
+ * /api/v1/users/me:
  *   get:
  *     summary: Get profile of logged-in user
  *     tags: [Users]
@@ -20,7 +20,7 @@
 
 /**
  * @swagger
- * /api/users/me:
+ * /api/v1/users/me:
  *   patch:
  *     summary: Update profile of logged-in user
  *     tags: [Users]

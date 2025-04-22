@@ -7,7 +7,7 @@
 
 /**
  * @swagger
- * /api/tickets:
+ * /api/v1/tickets:
  *   post:
  *     summary: Create a new support ticket
  *     tags: [Tickets]
@@ -32,7 +32,7 @@
 
 /**
  * @swagger
- * /api/tickets:
+ * /api/v1/tickets:
  *   get:
  *     summary: Get all tickets for the logged-in user
  *     tags: [Tickets]
@@ -46,7 +46,7 @@
 
 /**
  * @swagger
- * /api/tickets/recent:
+ * /api/v1/tickets/recent:
  *   get:
  *     summary: Get recently created tickets
  *     tags: [Tickets]
@@ -59,7 +59,7 @@
 
 /**
  * @swagger
- * /api/tickets/{id}:
+ * /api/v1/tickets/{id}:
  *   get:
  *     summary: Get ticket details by ID
  *     tags: [Tickets]

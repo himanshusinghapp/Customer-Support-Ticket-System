@@ -7,7 +7,7 @@
 
 /**
  * @swagger
- * /api/replies/{ticketId}/reply:
+ * /api/v1/replies/{ticketId}/reply:
  *   post:
  *     summary: Add a reply to a ticket
  *     tags: [Replies]
@@ -37,7 +37,7 @@
 
 /**
  * @swagger
- * /api/replies/{ticketId}/replies:
+ * /api/v1/replies/{ticketId}/replies:
  *   get:
  *     summary: Get replies for a specific ticket
  *     tags: [Replies]
